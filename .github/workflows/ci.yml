@@ -7,6 +7,8 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    outputs:
+      hoge: 'success'
     steps:
       - run: echo "::set-output name=hoge::failure"
         id: hoge
