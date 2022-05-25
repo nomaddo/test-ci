@@ -12,8 +12,9 @@ jobs:
     steps:
       - id: hoge
         run: |
-          ls
+          echo 1
           [[ -n "Test" ]]
+          echo 2
           [[ -z "Test" ]]
           echo 3
   job2:
