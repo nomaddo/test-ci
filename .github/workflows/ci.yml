@@ -12,6 +12,6 @@ jobs:
       - run: exit 1
   job2:
     runs-on: ubuntu-latest
-    if: job1.status == "success"
+    if: job1.status == 'success'
     steps:
       - run: echo "success"
