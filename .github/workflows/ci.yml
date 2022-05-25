@@ -8,7 +8,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
+      - run: echo "::set-output name=hoge::failure"
         id: hoge
         continue-on-error: true
   job2:
