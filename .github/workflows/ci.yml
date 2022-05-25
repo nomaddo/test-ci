@@ -7,14 +7,11 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    outputs:
-      hoge: 'success'
+    outputs: [hoge]
     steps:
       - id: hoge
         run: exit 1
         continue-on-error: true
-      - run: echo "::set-output name=hoge::failure"
-        if: steps.hoge.outcome == 'failure'
   job2:
     runs-on: ubuntu-latest
     needs: [job1]
