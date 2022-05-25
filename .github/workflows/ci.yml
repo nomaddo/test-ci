@@ -11,8 +11,7 @@ jobs:
       hoge: 'success'
     steps:
       - id: hoge
-        run: |
-          echo "::set-output name=hoge::failure"
+        run: exit 1
         continue-on-error: true
   job2:
     runs-on: ubuntu-latest
