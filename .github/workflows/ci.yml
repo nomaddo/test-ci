@@ -14,6 +14,6 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     needs: [job1]
-    if: needs.job1.outputs.hoge == 'success'
+    if: needs.job1.outputs.hoge == 'failure'
     steps:
       - run: echo "success"
