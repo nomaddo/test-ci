@@ -12,9 +12,9 @@ jobs:
     steps:
       - id: hoge
         run: |
-          ls &&
-          echo 2 &&
-          exit 1
+          ls
+          [[ -n "Test" ]]
+          [[ -z "Test" ]]
           echo 3
   job2:
     runs-on: ubuntu-latest
