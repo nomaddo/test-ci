@@ -11,8 +11,11 @@ jobs:
       hoge: ${{ steps.hoge.outcome }}
     steps:
       - id: hoge
-        run: exit 1
-        continue-on-error: true
+        run: |
+          ls
+          echo 2
+          exit 1
+          echo 3
   job2:
     runs-on: ubuntu-latest
     needs: [job1]
