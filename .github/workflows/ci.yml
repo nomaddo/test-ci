@@ -12,8 +12,8 @@ jobs:
     steps:
       - id: hoge
         run: |
-          ls
-          echo 2
+          ls &&
+          echo 2 &&
           exit 1
           echo 3
   job2:
